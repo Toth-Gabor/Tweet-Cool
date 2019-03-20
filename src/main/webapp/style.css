@@ -1,0 +1,69 @@
+body{
+    background-image: url("background.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+h2 {
+    color: white;
+}
+
+* {box-sizing: border-box;}
+input.date {
+    margin-left: 80px;
+}
+
+.tweets {
+    float: left;
+    margin-left: 100px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    align-content: center;
+    text-align: center;
+    width: 50%;
+}
+
+.tweets p {
+    color: white;
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0px 10px 0px;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
