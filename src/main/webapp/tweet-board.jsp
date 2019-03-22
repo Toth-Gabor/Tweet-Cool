@@ -13,7 +13,7 @@
         <div class="settings">
             <form class="input" action="tweets" method="post">
                 <select class="number" name="limit">
-                    <option value="10">10</option>
+                    <option value="2">2</option>
                     <option value="15">15</option>
                     <option value="20">20</option>
                     <option value="25">25</option>
@@ -25,17 +25,28 @@
                     <option value="10">10</option>
                     <input class="date" type="datetime-local" placeholder="Date" name="date" value="date">
                     <input class="date" type="text" placeholder="Name" name="name" value="name">
+                    <button class="send-button" type="submit" class="btn">Send</button>
                 </select>
-
             </form>
-
         </div>
         <div class="tweets">
-            <c:forEach var="t" items="${tweets}">
-                <p>Name: <c:out value="${t.getName()}"/> Tweet: <c:out value="${t.getComment()}"/></p>
-                <p><c:out value="${t.getDate().toString()}"/></p>
-            </c:forEach>
+            <h2>Tweets</h2>
+            <table border="1">
+                <tr>
+                    <th>Id</th>
+                    <th>Poster</th>
+                    <th>Tweet</th>
+                    <th>Date</th>
+                </tr>
+                    <c:forEach var="t" items="${tweets}">
+                        <tr>
+                        <td>${t.getId()}"</td>
+                        <td>${t.getName()}</td>
+                        <td>${t.getComment()}"</td>
+                        <td>${t.getDate().toString()}</td>
+                        </tr>
+                    </c:forEach>
+            </table>
         </div>
-
     </body>
 </html>

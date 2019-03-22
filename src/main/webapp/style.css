@@ -1,32 +1,15 @@
-body{
-    background-image: url("background.jpg");
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size:cover;
-}
 
-h2 {
-    color: white;
-}
 
 * {box-sizing: border-box;}
 input.date {
     margin-left: 80px;
 }
 
-.tweets {
-    float: left;
-    margin-left: 100px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
-    align-content: center;
-    text-align: center;
-    width: 50%;
+
+button.send-button {
+    caret-color: auto;
 }
 
-.tweets p {
-    color: white;
-}
 .input-container {
   display: -ms-flexbox; /* IE10 */
   display: flex;

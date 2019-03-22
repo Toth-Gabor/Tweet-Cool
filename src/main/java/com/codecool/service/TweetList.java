@@ -26,7 +26,7 @@ public class TweetList {
         tweets.add(tweet);
     }
     
-    public List<Tweet> getTweetsByName(String name) { // throws exeptions????
+    public List<Tweet> getTweetsByName(String name) {
         List<Tweet> tweetsByName = new ArrayList<>();
         
         for (Tweet tweet : tweets) {
@@ -34,24 +34,24 @@ public class TweetList {
                 tweetsByName.add(tweet);
             }
         }
-        return tweetsByName.size() != 0 ? tweetsByName : tweets;
+        return tweetsByName;
     }
     
-    public List<Tweet> getNumberOfTweets(int num) { // throws exeptions????
-        List<Tweet> amountOfTweets = new ArrayList<>();
+    public List<Tweet> getNumberOfTweets(int num) {
+        List<Tweet> listOfTweets = new ArrayList<>();
 
         if (num >= tweets.size()) {
             return tweets;
         }
         if (num < tweets.size()) {
             for (int i = 0; i < num; i++) {
-                amountOfTweets.add(tweets.get(i));
+                listOfTweets.add(tweets.get(i));
             }
         }
-        return amountOfTweets;
+        return listOfTweets;
     }
     
-    public List<Tweet> skipNumOfTweets(int num) { // throws exeptions????
+    public List<Tweet> skipNumOfTweets(int num) {
         List<Tweet> notSkippedTweets = new ArrayList<>();
         if (num >= tweets.size()) {
             return tweets;
@@ -72,5 +72,9 @@ public class TweetList {
         }
         return filteredByDate;
         
+    }
+    //TODO befejezni a többi filtert!
+    public List<Tweet> getFilteredTweets(String name, int skip, int limit, Date date) {
+        return getTweetsByName(name);
     }
 }

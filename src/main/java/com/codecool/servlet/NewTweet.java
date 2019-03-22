@@ -17,6 +17,7 @@ public class NewTweet extends HttpServlet {
     
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html;charset=UTF-8");
         String name = req.getParameter("name");
         String content = req.getParameter("comment");
         Date date = new Date();
